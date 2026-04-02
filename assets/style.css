@@ -1,0 +1,532 @@
+:root {
+    --primary-color: #0B1220;
+    --secondary-color: #C0C019;
+    --bg-color: #263244;
+    --text-color: #D9D9D9;
+    --highlight-color:rgb(56, 74, 91);
+}
+
+*, html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.wrap {
+    width: 100%;
+    background-color: var(--bg-color);
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.hero {
+    background-color: var(--primary-color);
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
+
+.hero, .target-audience, .benefits, .pricing {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+}
+
+.top-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.top-nav > div > img:nth-child(1) {
+    width: 100px;
+    display: none;
+    height: auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.top-nav > div > img:nth-child(2) {
+    width: 200px;
+    height: auto;
+}
+
+.top-nav > div > p {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.menu-icon {
+    display: none;
+    width: 45px;
+    height: auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 16px;
+    font-size: 16px;
+    color: var(--text-color);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.nav-menu > a {
+    text-decoration: none;
+    color: var(--text-color);
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.nav-menu > a:hover {
+    opacity: 1;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.content-hero, .about, .benefits-content, .pricing-content, .apply {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    line-height: 1.2;
+}
+
+.content-hero > div:first-child, .about-content, .apply-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 50%;
+}
+
+.content-hero > div:first-child > h1 {
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.content-hero > div:first-child > h1 > span {
+    color: var(--secondary-color);
+}
+
+.content-hero > div:first-child > p {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.content-hero > div:first-child > span {
+    font-size: 16px;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.hero > button {
+    width: 200px;
+    height: 50px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.hero > button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px 0 rgba(192, 192, 25, 0.3);
+}
+
+.content-hero > img, .about > img, .apply > img {
+    max-width: 452px;
+    height: auto;
+}
+
+.target-audience, .benefits {
+    gap: 40px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.target-audience-content {
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.target-audience-content > div {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.target-audience-content > div > img {
+    width: 175px;
+    height: auto;
+}
+
+.target-audience-content > div > p:first-of-type {
+    background-color: var(--highlight-color);
+    padding: 6px 10px;
+    border-radius: 12px;
+}
+
+.about {
+    padding: 40px 20px;
+    color: white;
+}
+
+.about-content > h2, .pricing > h2, .apply-content > h2 {
+    font-size: 26px;
+    font-weight: 600;
+    white-space: normal;
+    line-height: 1.3;
+    color: white;
+}
+
+.about-content > h2 > span {
+    color: var(--secondary-color);
+}
+
+.about-content > p {
+    font-size: 16px;
+}
+
+.about-content > p > span {
+    color: var(--secondary-color);
+}
+
+.about-content > div {
+    display: flex;
+    gap: 20px;
+}
+
+.about-content > div > p {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    padding: 10px 14px;
+    border-radius: 12px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 192px;
+    min-width: 150px;
+    text-align: center;
+    height: 156px;
+    gap: 10px;
+}
+
+.about-content > div > p > span {
+    background-color: var(--highlight-color);
+    padding: 6px 10px;
+    border-radius: 24px;
+    color: white;
+    width: 70px;
+}
+
+.benefits {
+    min-height: 100vh;
+    justify-content: center;
+}
+
+.benefits-content, .pricing-content {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.benefits-content > div, .pricing-content > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.benefits-content > div:first-child, .benefits-content > div:nth-child(2), .benefits-content > div:nth-child(3) {
+    width: 337px;
+    height: auto;
+}
+
+.benefits-content > div:nth-child(4) {
+    width: 78%;
+    height: auto;
+}
+
+.benefits-content > div > img {
+    width: 175px;
+    height: auto;
+}
+
+.benefits-content > div > p:first-of-type {
+    background-color: var(--highlight-color);
+    padding: 6px 10px;
+    border-radius: 12px;
+}
+
+.benefits-content > div > p:last-of-type {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.benefits-content > div > p:last-of-type > span {
+    color: var(--secondary-color);
+}
+
+.pricing {
+    gap: 40px;
+    justify-content: center;
+}
+
+.pricing > h2 {
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.pricing-content > div {
+    width: 370px;
+    height: 279px; 
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+    background-color: var(--primary-color);
+    padding: 40px;
+    border-radius: 12px;
+}
+
+.pricing-content > div > p:first-of-type {
+    font-size: 20px;
+    font-weight: semibold;
+    color: white;
+    background-color: var(--highlight-color);
+    padding: 6px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 12px;
+    width: 290px;
+    height: 58px;
+
+}
+
+.pricing-content > div > p:last-of-type {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.pricing-content > div > button {
+    border: none;
+    background-color: var(--secondary-color);
+    width: 80%;
+    min-height: 40px;
+    border-radius: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    color: var(--primary-color);
+}
+
+.pricing-content > div > button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(192,192,25,0.3);
+}
+
+.apply {
+    padding: 40px 20px;
+}
+
+.apply-content {
+    gap: 60px;
+    align-items: center;
+}
+
+.apply-content > form {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    width: 536px;
+}
+
+.apply-content > form > input {
+    border: none;
+    width: 536px;
+    height: 60px;
+    padding-left: 20px;
+    background: var(--primary-color);
+    border-radius: 14px;
+    color: var(--text-color);
+}
+
+.apply-content > form > button {
+    border: none;
+    font-size: 18px;
+    color: var(--primary-color);
+    font-weight: 600px;
+    padding: 10px 20px;
+    align-self: center;
+    background-color: var(--secondary-color);
+    border-radius: 50px;
+}
+
+.footer {
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.footer > a > img {
+    width: 274px;
+}
+
+.footer > div {
+    display: flex;
+    gap: 20px;
+}
+
+.footer > div > img {
+    width: 44px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+
+    .hero, .target-audience, .about, .benefits, .pricing, .apply, .footer {
+        height: auto;
+        gap: 40px;
+    }
+
+    .top-nav > div:first-child > img:nth-child(1) {
+        display: block;
+    }
+
+    .top-nav > div:first-child > img:nth-child(2), .top-nav > div:first-child > p {
+        display: none;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        top: 5px;
+        right: 20px;
+        background-color: var(--primary-color);
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 20px 40px 0 rgba(0,0,0,0.4);
+        gap: 16px;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .content-hero, .target-audience-content, .about, .pricing-content, .apply, .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-content, .apply-content {
+        gap: 20px;
+        width: 100%;
+    }
+
+    .about-content > div {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        justify-content: center;
+        overflow-x: hidden;
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+
+    .about-content > div > p {
+        max-width: 70px;
+        height: 150px;
+        margin: 0 auto;
+        margin-top: 20px;   
+    }
+
+    .content-hero > div:first-child {
+        width: 100%;
+    }
+
+    .hero > button {
+        align-self: center;
+    }
+
+    .content-hero > img, .about > img, .apply > img {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .benefits-content > div {
+        width: 100%;
+        min-width: 337px;
+    }
+
+    .apply-content {
+        align-items: center;
+        gap: 40px;
+        padding: 10px 20px;
+    }
+
+    .apply-content > form {
+        width: 90%;
+        margin-bottom: 40px;
+    }
+
+    .apply-content > form > input {
+        width: 100%;
+    }
+
+    .pricing-content {
+        width: 100%;
+        align-items: center;
+    }
+    
+    .pricing-content > div {
+        width: 100%;
+        max-width: 370px;   
+        height: auto;
+        padding: 24px;
+    } 
+}
+
